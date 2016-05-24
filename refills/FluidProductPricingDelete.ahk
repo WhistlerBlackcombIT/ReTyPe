@@ -100,7 +100,8 @@ class FluidProductPricingDelete extends Fluid {
 						IfMsgBox, No
 							return
 					}
-					; If we made it this far, let's nuke some shit
+
+					; If we made it this far, let's nuke some stuff
 					Loop %intIterate%
 					{
 						WinActivate, ahk_id %idWinRTP%

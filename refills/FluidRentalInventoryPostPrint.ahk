@@ -59,7 +59,6 @@ class FluidRentalInventoryPostPrint extends Fluid {
 	pour() {
 		Global ; all vars are global
 
-
 		strGroup		:= this.__Class
 		strRTP			:= % objRetype.objRTP.classNN()
 		this.strRTP 	:= strRTP
@@ -206,7 +205,6 @@ class FluidRentalInventoryPostPrint extends Fluid {
 				; If so, open the report, the whole point of this lengthy exercise
 				;Run, http://rtp_reporting/ReportServer/Pages/ReportViewer.aspx?/Custom+Reports/Rental+Reports/Rental+Inventory+Reports/Rental+Inventory+-+Transfer+PickList&TransferId=%idTransfer%
 				Run, http://rtp_reporting/ReportServer/Pages/ReportViewer.aspx?/Custom+Reports+-+RTP+Container/Rental+Inventory+Reports/Rental+Inventory+-+Transfer+PickList&rs:Command=Render&TransferId=%idTransfer%
-
 			} else {
 				; Otherwise tell them what they did, because duh
 				msgbox.info( "Batch post cancelled" )

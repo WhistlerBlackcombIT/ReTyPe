@@ -66,6 +66,7 @@ class FluidListItemDelete extends Fluid {
 
 		; Activate RTP (after toolbar has been clicked)
 		objRetype.objRTP.Activate()
+
 ; @todo Check needs to be removed once I've managed to wall-in shortcuts in to the RTP only window
 		; Run if it's ready!
 		IfWinActive, ahk_group %strGroup%
@@ -176,7 +177,7 @@ class FluidListItemDelete extends Fluid {
 						intWait++
 					}
 */
-					; Hit that button, delete that shit!
+					; Hit that button, delete that stuff!
 					;ControlClick, Yes
 					Send {Space}
 					Sleep 300

@@ -99,6 +99,7 @@ if ( !A_IsCompiled ) {
 	{
 		FileAppend, #Include refills\%A_LoopFileName%`n, %A_ScriptDir%\refills.ahk
 	}
+
 }
 ; This include is actually evaluated before any other code (all Include commands are)
 ; meaning that if you change the name of a refill, you must empty the existing file
@@ -125,3 +126,4 @@ return
 fnExit:
 	ExitApp
 return
+

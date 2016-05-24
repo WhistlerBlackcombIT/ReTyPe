@@ -61,6 +61,7 @@ class FluidCommissionProductAdd extends Fluid {
 
 		; Activate RTP (after toolbar has been clicked)
 		objRetype.objRTP.Activate()
+
 ; @todo Check needs to be removed once I've managed to wall-in shortcuts in to the RTP only window
 		; Run if it's ready!
 		IfWinActive, ahk_group %strGroup%

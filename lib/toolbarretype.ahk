@@ -184,7 +184,6 @@ class ToolbarRetype extends Toolbar {
 			objRetype.objRTP.setID( idWinRTP )
 ; msgbox.show( objRetype.objRTP.getID() )
 		return
-
 	}
 
 	/**
@@ -215,7 +214,7 @@ class ToolbarRetype extends Toolbar {
 		base.render()
 
 		; Load timer
-		SetTimer, fnToolbarRetype, 1000
+		SetTimer, fnToolbarRetype, 100
 
 		; Any post-rendering stuff
 		this.p_postrender()
@@ -233,7 +232,7 @@ class ToolbarRetype extends Toolbar {
 			; Get RTP window for later reference
 			;WinGet, idWinRTP, ID, RTP|ONE Container ahk_class %strRTP%
 			idWinRTP := objRetype.objRTP.getID()
-; msgbox.show( idWinRTP )
+
 			; Hide the toolbar if window is minimized
 			WinGet, intWinRtpMinMax, MinMax, ahk_id %idWinRTP%
 			If ( -1 = intWinRtpMinMax ) {

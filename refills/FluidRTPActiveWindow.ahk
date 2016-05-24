@@ -48,6 +48,7 @@ class FluidRTPActiveWindow extends Fluid {
 
 		; Find active RTP window and store its ID for use
 		strGroup := objRetype.objRTP.strWinGroup
+
 		IfWinActive, ahk_group %strGroup%
 		{
 			objRetype.objRTP.setID( WinActive( ahk_group %strGroup% ) )

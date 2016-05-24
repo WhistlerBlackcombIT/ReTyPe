@@ -2,7 +2,7 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #SingleInstance,Force
 SetWorkingDir,%A_ScriptDir%  ; Ensures a consistent starting directory.
- #Include Class_Console.ahk
+#Include Class_Console.ahk
 
 Class_Console("VariableList",100,100,400,600,"Variable List")
 VariableList.log("Variable List:This is working")

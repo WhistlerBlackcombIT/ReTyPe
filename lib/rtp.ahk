@@ -48,7 +48,6 @@ class RTP {
 	intWindow		:= 11
 	intElement		:= 1
 	strTitle		:= "RTP|ONE Container"
-
 	strWinGroup		:= "RTP"
 
 	; Implemenatation variables
@@ -81,6 +80,7 @@ class RTP {
 		this.idProcess := idWinRTP
 
 		this._regroup()
+
 		; Treeview config
 		; iniread intTreeCustomerCommon
 		; iniread intTreeCustomerAccess
@@ -235,7 +235,7 @@ class RTP {
 			}
 		}
 
-; @todo Verify which profile is loaded in case searched and then opened dependent.  Thanks to RTP's usual skullfuckery of
+; @todo Verify which profile is loaded in case searched and then opened dependent.  Thanks to RTP's usual mess of
 ; a GUI, we cannot directly reference the IP: xxxxxx field on a profile, instead must search EVERY visible control for text
 ; IP: xxxxxxx and if we get a match, then it's loaded, else re-search.  Yeah, thanks.
 ; write to intCustomerIP
@@ -434,6 +434,7 @@ class RTP {
 	 * you will need to specify either to increment or decrement the year first
 	 * 
 	 * @todo leap year handling
+	 * @todo also see send class for input dates
 	 * 
 	 * @param bool blnUp Control whether to increment or decrement a date input year before transposing
 	 *
