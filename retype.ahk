@@ -78,15 +78,15 @@ if ( !A_IsCompiled ) {
 	{
 		FileAppend, #Include refills\%A_LoopFileName%`n, %A_ScriptDir%\refills.ahk
 	}
-}
-; This include is actually evaluated before any other code (all Include commands are)
-; meaning that if you change the name of a refill, you must empty the existing file
-; rather than deleting it else it will try to be included before it is created
-; The first execution after an empty refills.ahk will be broken as it would have
-; been included empty.  The second execution will work as expected as the file will
-; have been populated with the correct files on execution one.  Comprendes?
-#Include %A_ScriptDir%\refills.ahk
 
+	; This include is actually evaluated before any other code (all Include commands are)
+	; meaning that if you change the name of a refill, you must empty the existing file
+	; rather than deleting it else it will try to be included before it is created
+	; The first execution after an empty refills.ahk will be broken as it would have
+	; been included empty.  The second execution will work as expected as the file will
+	; have been populated with the correct files on execution one.  Comprendes?
+	#Include %A_ScriptDir%\refills.ahk
+}
 
 ; Make stuff happen!
 objRetype.go()

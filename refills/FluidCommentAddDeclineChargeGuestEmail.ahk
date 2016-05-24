@@ -37,8 +37,15 @@ class FluidCommentAddDeclineChargeGuestEmail extends Fluid {
 				; At this point we are not in customer manager
 				MsgBox.error( "Can only be run from within Customer Manager" )
 			} else {
+				; In customer manager, let's get IP code input
+				intIP 			:= InputBox.show( "Enter IP code on which to comment" )
+				; IP Validation
+; @todo Validation
+				; 6 <= Len( IP ) <= 7
+
 				; Make sure in RTP, then find customer
 				objRetype.objRTP.Activate()
+				objRetype.objRTP.CustomerSearchAndSelect( intIP )
 
 				; Construct subject and comment
 				strSubject = Emailed guest

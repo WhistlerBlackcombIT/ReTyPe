@@ -163,7 +163,7 @@ class RTP {
 
 		; Control definition (in case they change later because let's be honest, they probably will!)
 		IniRead, strCustomerListViewControl, % this.strFileConf, Controls, CustomerListView, 11
-		strCustomerListView := this.formatClassNN( "SysListView32", strCustomerListViewControl ) ; Well yeah, or is it actually the comments? Who the fuck knows
+		strCustomerListView := this.formatClassNN( "SysListView32", strCustomerListViewControl ) ; Well yeah, or is it actually the comments? Who the hell knows
 		IniRead, strCustomerTabControl, % this.strFileConf, Controls, CustomerTab, 11
 		strCustomerTab := this.formatClassNN( "SysTabControl32", strCustomerTabControl )
 		IniRead, strSearchEditControl, % this.strFileConf, Controls, SearchEdit, 11
@@ -197,7 +197,7 @@ class RTP {
 			}
 		}
 
-; @todo Verify which profile is loaded in case searched and then opened dependent.  Thanks to RTP's usual skullfuckery of
+; @todo Verify which profile is loaded in case searched and then opened dependent.  Thanks to RTP's usual mess of
 ; a GUI, we cannot directly reference the IP: xxxxxx field on a profile, instead must search EVERY visible control for text
 ; IP: xxxxxxx and if we get a match, then it's loaded, else re-search.  Yeah, thanks.
 ; write to intCustomerIP

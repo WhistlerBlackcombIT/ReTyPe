@@ -91,7 +91,7 @@ return
 
 			; @todo check pass number begins with "(50" otherwise tab to next, check, repeat
 
-				; Seeing as apparently Control Click doesn't work either (RTP controls are such shit)
+				; Seeing as apparently Control Click doesn't work either (RTP controls are such a mess)
 				; we're instead going to have to literally click on it
 				ControlGetPos, intX, intY,,, %strControlFocus%, ahk_id %idWinRTP%
 				intX := intX+5

@@ -31,7 +31,7 @@ class Debug extends console {
 			strFile := this.strFileLog
 			FileAppend, %strDebug%, %strFile%
 		} else {
-			; @todo some array shit
+			; @todo some array stuff
 		}
 	}
 
@@ -39,18 +39,16 @@ class Debug extends console {
 	 * Environment dependant debug message output that will also show stack-trace of from where it was called
 	 * @see https://gist.github.com/hoppfrosch/7672038
 	 *
-	 * @param String o1 Debug message to be displayed along with stack-trace
+	 * @param String strMessage Debug message to be displayed along with stack-trace
 	 * @return void
 	 */
-	msg( o1="~`a", o2="~`a", o3="~`a", o4="~`a", o5="~`a", o6="~`a", o7="~`a", o8="~`a" ) {
+	msg( strMessage="" ) {
 		; Should we read and display line of code in output?
 		blnCode := false
 
 		; Only do this if we're in a dev environment otherwise we don't want debug info (like in Prod)
 		; And if we're running in a non-compiled environment (which we can infer is dev/testing)
 		if ( "dev" = this.env AND 1 != A_IsCompiled ) {
-m( o1, o2, o3, o4, o5, o6, o7, o8 )
-return
 			; Instantiate exceptions to grab necessary stack-trace info
 			objTrace := Exception("", -1)
 			objTracePrev := Exception("", -2)
@@ -68,7 +66,7 @@ return
 			strStack := "File:`t" strfile "`nLine:`t" objTrace.line (objTracePrev.What = -2 ? "" : "`nIn:`t" objTracePrev.What) (blnCode ? "`nCode:`t" strLine : "") "`n`n"
 
 			; Display trace and message
-			msgbox % strStack o1
+			msgbox % strStack strMessage
 		}
 	}
 

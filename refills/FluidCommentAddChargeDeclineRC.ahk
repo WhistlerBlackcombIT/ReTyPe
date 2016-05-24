@@ -49,6 +49,7 @@ class FluidCommentAddChargeDeclineRC extends Fluid {
 				objRetype.objRTP.Activate()
 
 				strSubject = Owes $%intAmountOwed% - RC charge
+
 				strComment = For %intSaleDate%. Need to check CC on file. Emailed guest. %A_UserName% x7055
 				objRetype.objRTP.CustomerAddComment( strSubject, strComment )
 			}

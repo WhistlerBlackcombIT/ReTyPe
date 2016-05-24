@@ -36,12 +36,19 @@ class FluidCommentAddDeclineChargeGuestSpoken extends Fluid {
 				; At this point we are not in customer manager
 				MsgBox.error( "Can only be run from within Customer Manager" )
 			} else {
+				; In customer manager, let's get IP code input
+				intIP 			:= InputBox.show( "Enter IP code on which to comment" )
+				; IP Validation
+; @todo Validation
+				; 6 <= Len( IP ) <= 7
+
 				; Name of contact
 				strGuest		:= InputBox.show( "With whom did you speak?" )
-; @todo: Check for blank input
+				; Check for blank input
 
 				; Make sure in RTP, then find customer
 				objRetype.objRTP.Activate()
+				objRetype.objRTP.CustomerSearchAndSelect( intIP )
 
 				; Construct subject and comment
 				strSubject = Phoned guest, spoke to %strGuest%

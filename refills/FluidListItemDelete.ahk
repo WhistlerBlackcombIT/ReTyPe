@@ -178,7 +178,7 @@ class FluidListItemDelete extends Fluid {
 						intWait++
 					}
 */
-					; Hit that button, delete that shit!
+					; Hit that button, delete that stuff!
 					;ControlClick, Yes
 					Send {Space}
 					Sleep 300
